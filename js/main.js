@@ -2,7 +2,7 @@ const input = document.querySelector("#send");
 const text = document.querySelector("#text");
 const counter = document.querySelector("#counter")
 
-input.addEventListener('click', (e)=> {
+const cleaning = input.addEventListener('click', (e)=> {
   e.preventDefault();
   let palavroes = ['porra', 'caralho', 'corno', 'puto'];
   let valuetext = text.value.toLowerCase();
@@ -24,6 +24,5 @@ text.addEventListener("keypress", (e)=> {
     e.preventDefault();
   }
 
-  counter.innerHTML = inputLength.toString();
-  console.log(counter.value)
+  counter.innerHTML = (inputLength + 1).toString();
 });
