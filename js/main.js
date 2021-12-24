@@ -9,7 +9,7 @@ input.addEventListener('click', (e)=> {
   palavroes.forEach(
     (value) => {
       if (valuetext.match(value)){
-        valuetext = valuetext.replaceAll(value, '****');
+        valuetext = valuetext.replaceAll(value, '***');
       }
     }
   )
