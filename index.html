@@ -26,7 +26,6 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <h1 class="text-center mt-4">Phrase  Cleaner</h1>
@@ -34,21 +33,20 @@
   </div>
   <form>
     <div class="container-fluid main-container">
-      <div class="row">
-        <h5>Digite sua frase</h5>
-        <div class="form-group">
-          <textarea type="text" class="form-control" rows="5" id="text" name="text"></textarea>
-          <div class="col text-center">
-            <button type="button" id="send" class="btn btn-primary btn-lg btn-block">Limpar a frase</button>
-          </div>
+      <h5>Digite sua frase</h5>
+      <div class="form-group">
+        <textarea type="text" class="form-control" rows="5" id="text" name="text"></textarea>
+        <div class="col text-center">
+          <button type="button" id="send" class="btn btn-primary btn-lg btn-block">Limpar a frase</button>
         </div>
+      </div>
+      <span id="counter"></span><span>/255</span>
     </div>
   </form>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js" defer></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')

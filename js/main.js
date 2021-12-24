@@ -1,9 +1,10 @@
-let input = document.querySelector("#send");
+const input = document.querySelector("#send");
+const text = document.querySelector("#text");
+const counter = document.querySelector("#counter")
 
 input.addEventListener('click', (e)=> {
   e.preventDefault();
   let palavroes = ['porra', 'caralho', 'corno', 'puto'];
-  let text = document.querySelector("#text");
   let valuetext = text.value.toLowerCase();
   palavroes.forEach(
     (value) => {
@@ -13,5 +14,16 @@ input.addEventListener('click', (e)=> {
     }
   )
   text.value = valuetext;
+});
 
-})
+text.addEventListener("keypress", (e)=> {
+  const maxChars = 255;
+  let inputLength = text.value.length;
+
+  if(inputLength >= maxChars) {
+    e.preventDefault();
+  }
+
+  counter.innerHTML = inputLength.toString();
+  console.log(counter.value)
+});
